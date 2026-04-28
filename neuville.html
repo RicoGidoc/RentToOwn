@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Neuville House Details</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <a href="index.html" class="home-float">🏠 Back to home page</a>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+    }
+
+    .details-container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+    }
+
+    /* Main Image */
+    .main-img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* SLIDING THUMBNAILS (AUTO) */
+    .liora-gallery {
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+        animation: slide 18s linear infinite;
+    }
+
+    .img-box {
+        flex: 0 0 auto;
+    }
+
+    .img-box img {
+        height: 80px;
+        width: 110px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .img-box img:hover {
+        transform: scale(1.08);
+        border: 2px solid #1e3a8a;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* AUTO SLIDE ANIMATION */
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Pause on hover */
+    .liora-gallery:hover .slider-track {
+        animation-play-state: paused;
+    }
+
+    h1 {
+        margin-top: 10px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    .home-float {
+        display: inline-block;
+        margin: 10px;
+        text-decoration: none;
+        background: green;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+</style>
+
+<body>
+
+    <div class="details-container">
+        <h1>✅NEUVILLE ASTRID TOWNHOUSE🏡</h1>
+
+        <img src="neuville/nu1.jpg" class="main-img">
+
+        <div class="liora-gallery">
+            <div class="img-box"><img src="neuville/nu4.jpg"></div>
+            <div class="img-box"><img src="neuville/nu5.jpg"></div>
+            <div class="img-box"><img src="neuville/ground floor.png"></div>
+            <div class="img-box"><img src="neuville/2nd floor.png"></div>
+            <div class="img-box"><img src="neuville/nu7.jpg"></div>
+            <div class="img-box"><img src="neuville/nu9.jpg"></div>
+            <div class="img-box"><img src="neuville/nu10.jpg"></div>
+            <div class="img-box"><img src="neuville/nu11.jpg"></div>
+            <div class="img-box"><img src="neuville/nu12.jpg"></div>
+            <div class="img-box"><img src="neuville/nu13.jpg"></div>
+            <div class="img-box"><img src="neuville/nu14.jpg"></div>
+            <div class="img-box"><img src="neuville/nu15.jpg"></div>
+            <div class="img-box"><img src="neuville/nu16.jpg"></div>
+            <div class="img-box"><img src="neuville/nu17.jpg"></div>
+            <div class="img-box"><img src="neuville/nu18.jpg"></div>
+            <div class="img-box"><img src="neuville/nu19.jpg"></div>
+            <div class="img-box"><img src="neuville/nu20.jpg"></div>
+            <div class="img-box"><img src="neuville/nu21.jpg"></div>
+        </div>
+
+        <h3>📍 Location:</h3>
+        <p>Sanja Major Road, Tanza, Cavite City</p>
+
+        <h3>📐 Property Details:</h3>
+        <ul>
+            <li>Lot Area: 52 sqm</li>
+            <li>Floor Area: 60.40 sqm</li>
+            <li>Floor Area: 90.00 sqm total improve area</li>
+            <li>3 Bedrooms</li>
+            <li>2 Toilet & Bath</li>
+            <li>Living Area, Dining Area, Kitchen, Service Area, Parking Area </li>
+        </ul>
+
+        <h3>💰 Price:</h3>
+        <p>Please Contact us...</p>
+        <p>20,000.00 - Reservation</p>
+
+        <h3> fb page:  📞 Contact: 0931 876 7788</h3>
+        <p>fb: Fhemie Silang |email: 📩silangeufemia@gmail.com</p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HAMILTON TOWNHOUSE</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        .details-container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* BACK BUTTON */
+        .home-float {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            background: green;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        /* MAIN IMAGE (IMPROVED) */
+        .main-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .main-wrapper:hover .main-img {
+            transform: scale(1.05);
+        }
+
+        /* subtle dark overlay */
+        .main-wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+        }
+
+        /* THUMBNAILS */
+        .thumbs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .thumbs img {
+            height: 80px;
+            width: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .thumbs img:hover {
+            transform: scale(1.08);
+            border: 2px solid #1e3a8a;
+        }
+
+        h1 {
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="home-float">🏠 Back to home page</a>
+
+    <div class="details-container">
+
+        <h1>HAMILTON IMUS, CAVITE 🏡</h1>
+
+        <!-- MAIN IMAGE -->
+        <div class="main-wrapper">
+            <img id="mainImage" src="hamilton/1.jpg" class="main-img">
+        </div>
+
+        <!-- THUMBNAILS -->
+        <div class="thumbs">
+            <img src="hamilton/1.jpg" onclick="changeImg(this)">
+            <img src="hamilton/2.jpg" onclick="changeImg(this)">
+            <img src="hamilton/3.jpg" onclick="changeImg(this)">
+            <img src="hamilton/4.jpg" onclick="changeImg(this)">
+            <img src="hamilton/5.jpg" onclick="changeImg(this)">
+            <img src="hamilton/6.jpg" onclick="changeImg(this)">
+            <img src="hamilton/7.jpg" onclick="changeImg(this)">
+            <img src="hamilton/8.jpg" onclick="changeImg(this)">
+            <img src="hamilton/9.jpg" onclick="changeImg(this)">
+            <img src="hamilton/10.jpg" onclick="changeImg(this)">
+            <img src="hamilton/11.jpg" onclick="changeImg(this)">
+            <img src="hamilton/12.jpg" onclick="changeImg(this)">
+            <img src="hamilton/13.jpg" onclick="changeImg(this)">
+        </div>
+
+        <h3>📍 Location:</h3>
+        <p>Brgy Malagasang II-E Imus, Cavite</p>
+
+        <h3>📐 Property Detail:</h3>
+        <ul>
+            <li>AMANDA END UNIT</li>
+            <li>Lot Area: 100sqm</li>
+            <li>Floor Area: 67sqm</li>
+            <li>Total Improve Area: 94.75</li>
+            <li>3 Bedrooms</li>
+            <li>2 Toilet & Bath + 1 Powder Room</li>
+            <li>Living Area, Dining Area, Kitchen</li>
+            <li>Garage</li>
+        </ul>
+
+        <h3>💰 Price:</h3>
+        <p>₱3,500,000</p>
+
+        <h3>📞 Contact: 0931 876 7788</h3>
+        <p> Fhemie Silang |email: 📩silangeufemia@gmail.com</p>
+
+    </div>
+
+    <script>
+        function changeImg(el) {
+            document.getElementById("mainImage").src = el.src;
+        }
+    </script>
+
+</body>
+
+</html>
