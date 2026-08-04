@@ -15,6 +15,96 @@
   <meta name="google-site-verification" content="2KJB1r6Ldr3nHKl6cuxeHVpYw_HBwt0GI1L3EmD-E-8" />
 
 
+.carousel{
+    position:relative;
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    transition:transform .5s ease-in-out;
+}
+
+.slide{
+    min-width:100%;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+.slide img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+}
+
+.slide p{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    border:none;
+    font-size:28px;
+    padding:12px 18px;
+    cursor:pointer;
+    border-radius:50%;
+    z-index:100;
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#1e3a8a;
+}
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let index = 0;
+
+    const slides = document.querySelector(".slides");
+    const totalSlides = document.querySelectorAll(".slide").length;
+
+    function showSlide(i) {
+        index = (i + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.querySelector(".next").addEventListener("click", function () {
+        showSlide(index + 1);
+    });
+
+    document.querySelector(".prev").addEventListener("click", function () {
+        showSlide(index - 1);
+    });
+
+    setInterval(function () {
+        showSlide(index + 1);
+    }, 4000);
+
+});
+</script>
+
+  
+
 <title>Rent to Own Homes Philippines | Affordable Modern Living</title>
 
 <meta name="description" content="Discover affordable rent-to-own homes in the Philippines with modern designs and convenient locations near schools, malls, transport hubs, and business centers.">
@@ -101,102 +191,80 @@
     </div>
   -->
 
-    <!-- slide show start -->
-    <div class="section" id="gallery">
-      <h2 style="color: #1e3a8a; font-weight: bold;">
-       VLADIMIR PATAUEG PERSONAL WEBSITE
-      </h2>
-      <!-- <h2><B FONT COLOR>🌐Vladimir Pstsueg Personal Website🛜</B></h2> -->
 
-      <div class="carousel">
 
-        <!-- <div class="slides"> -->
 
-          <div class="slide">
-            <a href="victoria.html">
-              <img src="victoria/vc10.png">
-            </a>
-            <p>VICTORIA VILLE BACOOR CAVITE</p>
-          </div>
-          
-          <div class="slide">
-            <a href="aguirre.html">
-              <img src="aguirre/1.png">
-            </a>
-            <p>AGUIRRE TOWNHOUSE LAS PINAS</p>
-          </div>
+  
+<!-- Slide Show Start -->
+<div class="section" id="gallery">
+    <h2 style="color:#1e3a8a;font-weight:bold;">
+        VLADIMIR PATAUEG PERSONAL WEBSITE
+    </h2>
 
-          <div class="slide">
-            <a href="versailles.html">
-              <img src="veramelie/amelie.png">
-            </a>
-            <p>VERSAILLES MODEL HOUSE</p>
-          </div>
+    <div class="carousel">
 
-          <div class="slide">
-            <a href="bellefort.html">
-              <img src="bellefort/sabine1.png">
-            </a>
-            <p>BELLEFORT SABINE MODEL HOUSE</p>
-          </div>
+        <div class="slides">
 
-          <div class="slide">
-            <a href="neuville.html">
-              <img src="neuville/nu5.jpg">
-            </a>
-            <p>NEUVILLE TOWNHOUSE TANZA</p>
-          </div>
+            <div class="slide">
+                <a href="victoria.html">
+                    <img src="victoria/vc10.png" alt="Victoria Ville">
+                </a>
+                <p>VICTORIA VILLE BACOOR CAVITE</p>
+            </div>
 
-          <div class="slide">
-            <a href="k5.html">
-              <img src="kat5/k1.png">
-            </a>
-            <p>K5 TOWNHOUSE MOLINO 7</p>
-          </div>
+            <div class="slide">
+                <a href="aguirre.html">
+                    <img src="aguirre/1.png" alt="Aguirre Townhouse">
+                </a>
+                <p>AGUIRRE TOWNHOUSE LAS PIÑAS</p>
+            </div>
 
-          <div class="slide">
-            <a href="liora.html">
-              <img src="liora/liora.jpg">
-            </a>
-            <p>LIORA NAIC CAVITE</p>
-          </div>
+            <div class="slide">
+                <a href="versailles.html">
+                    <img src="veramelie/amelie.png" alt="Versailles">
+                </a>
+                <p>VERSAILLES MODEL HOUSE</p>
+            </div>
 
-         </div> 
-           <!-- Buttons -->
+            <div class="slide">
+                <a href="bellefort.html">
+                    <img src="bellefort/sabine1.png" alt="Bellefort">
+                </a>
+                <p>BELLEFORT SABINE MODEL HOUSE</p>
+            </div>
+
+            <div class="slide">
+                <a href="neuville.html">
+                    <img src="neuville/nu5.jpg" alt="Neuville">
+                </a>
+                <p>NEUVILLE TOWNHOUSE TANZA</p>
+            </div>
+
+            <div class="slide">
+                <a href="k5.html">
+                    <img src="kat5/k1.png" alt="K5">
+                </a>
+                <p>K5 TOWNHOUSE MOLINO 7</p>
+            </div>
+
+            <div class="slide">
+                <a href="liora.html">
+                    <img src="liora/liora.jpg" alt="Liora">
+                </a>
+                <p>LIORA NAIC CAVITE</p>
+            </div>
+
+        </div>
+
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
 
-      </div>
     </div>
-
-    <script>
-      /* PASTE THE JS HERE */
-
-      let index = 0;
-      const slides = document.querySelector(".slides");
-      const totalSlides = document.querySelectorAll(".slide").length;
-
-      function showSlide(i) {
-        index = (i + totalSlides) % totalSlides;
-        slides.style.transform = `translateX(${-index * 100}%)`;
-      }
-
-      document.querySelector(".next").onclick = () => {
-        showSlide(index + 1);
-      };
-
-      document.querySelector(".prev").onclick = () => {
-        showSlide(index - 1);
-      };
-
-      /* Auto Slide */
-      setInterval(() => {
-        showSlide(index + 1);
-      }, 4000);
+</div>
 
 
-    </script>
 
+  
 
     <div class="properties-wrapper" id="prowrapper">
 
