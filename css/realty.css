@@ -70,7 +70,7 @@ nav a:hover {
 
 /* ===== MARQUEE ===== */
 .marquee {
-    background: #2f5d7c;
+    background: white;
     color: #ffffff;
     padding: 8px 10px;
     overflow: hidden;
